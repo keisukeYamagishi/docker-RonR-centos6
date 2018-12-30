@@ -1,0 +1,33 @@
+version: '2.1'
+
+services:
+  shichimi:
+    container_name: shichimi
+    stdin_open: true
+    build: .
+    environment:
+      DB_HOST_NAME: db
+    links:
+      - db
+    volumes:
+      - .:/usr/share/nginx/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf 
+      - bundle:/bundle
+    ports:
+      - 3000:3000
+    tty: true
+  db:
+    container_name: shichimi_db
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: jobs_development
+      MYSQL_USER: tomy
+      MYAPP_DATABASE_PASSWORD: jamjam
+    volumes:
+      - ./.data/mysql:/var/lib/mysql
+      - ./my.cnf.local:/etc/mysql/my.cnf
+    ports:
+      - 3307:3306
+volumes:
+  bundle:
+    driver: local
