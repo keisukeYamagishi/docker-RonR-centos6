@@ -21,8 +21,7 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_DATABASE: jobs_development
-      MYSQL_USER: tomy
-      MYAPP_DATABASE_PASSWORD: jamjam
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     volumes:
       - ./.data/mysql:/var/lib/mysql
       - ./my.cnf.local:/etc/mysql/my.cnf
