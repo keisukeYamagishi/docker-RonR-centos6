@@ -9,6 +9,15 @@ mysql 5.7
 
 ## Use it
 
+docker build
+
+```bash
+docker-compose build
+docker-compose up -d
+```
+
+docker login
+
 ```bash
 source ~/.bash_profile
 cd /app
