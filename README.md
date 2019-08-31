@@ -20,9 +20,8 @@ docker login
 
 ```bash
 source ~/.bash_profile
-cd /app
+cd /usr/share/nginx/html
 bundle install
-source ~/.bash_profile
 bundle exec unicorn_rails -c config/unicorn.rb -E development -D
 service nginx start
 ```
