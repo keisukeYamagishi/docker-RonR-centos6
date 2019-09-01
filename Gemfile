@@ -7,11 +7,8 @@ end
 
 gem 'rails'
 gem 'mysql2'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
 gem 'unicorn'
-gem 'jquery-rails'
-gem 'redis', '~> 3.0'
+gem 'redis'
 
 group :development, :test do
   gem 'byebug', platform: :mri
