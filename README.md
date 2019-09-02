@@ -1,6 +1,6 @@
 # README
 
-## over view
+## overview
 
 nginx
 Ruby on Rails
