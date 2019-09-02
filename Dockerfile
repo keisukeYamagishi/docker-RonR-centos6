@@ -23,6 +23,6 @@ RUN make install
 RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 WORKDIR /usr/share/nginx/html
-RUN source ~/.bash_profile && rbenv install 2.5.0 && rbenv rehash && rbenv global 2.5.0 && ruby -v && gem install bundler
+RUN source ~/.bash_profile && rbenv install 2.6.0 && rbenv rehash && rbenv global 2.6.0 && ruby -v && gem install bundler
 RUN cp /usr/local/lib64/libstdc++.so.6 /usr/lib64/
 CMD ["/bin/bash"]
