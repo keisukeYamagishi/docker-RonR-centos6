@@ -8,7 +8,6 @@ end
 gem 'rails'
 gem 'mysql2'
 gem 'unicorn'
-gem 'redis'
 
 group :development, :test do
   gem 'byebug', platform: :mri
